@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/ticketbooking.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="mobile">
+      <div class="logo">
+        <p>Travel The World</p>
+
+      </div>
+
+    </div>
+    <div class="mobile">
+
+      <div class="icon-bar">
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a></div>
+<div class="icon-bar">  <a href="about.html"><i class="fas fa-info"></i></a></div>
+  <div class="icon-bar"><a href="contact.html"><i class="fa fa-envelope"></i></a></div>
+<div class="icon-bar" > <a href="register.html"><i class="fa fa-user"></i></a></div>
+
+
+<div class="icon-bar" > <a href="hotelbooking.html"><i class="fas fa-hotel"></i></a></div>
+<div class="icon-bar">  <a href="carbooking.html"><i class="fas fa-taxi"></i></a></div>
+
+<div class="icon-bar" > <a href="ticketsbooking.html"><i class="fa fa-plane"></i></a></div>
+<div class="icon-bar">  <a href="mylist.html"><i class="fas fa-list"></i></a></div>
+<br><br><br><br><br><br>
+
+</div>
+
+    <div class="bannerdesktop">
+      <img src="images/aero.jpg" alt="dfgfds">
+
+
+    </div>
+    <div class="desktop">
+
+
+    <div class="navigationtickets">
+
+      <nav id = "ticketsnav">
+
+        <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a> </li>
+            <li> <a href="services.html">Services</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+            <li> <a href="mylist.html">My List</a> </li>
+            <li> <a href="register.html">LogIn</a> </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+
+
+      <div class="ticketsDetails">
+<div class="form">
+
+
+        <label for="airline">Airline</label>
+        <input type="text" name="airlinename" value="" id="airlinename"> &nbsp;
+        <label for="person">Passenger</label>
+        <input type="text" name="" value="" id= "numpassenger">&nbsp;
+        <br>
+        <br>
+        <label for="checkin">CheckIn</label>
+        <input type="date" name="" value="" id="aircheckin"> &nbsp;
+        <label for="checkout">CheckOut</label>
+        <input type="date" name="" value="" id = "aircheckout"> &nbsp;
+
+        <br><br>
+
+
+        <button type="button" name="button" id="bookhotel" onclick="bookairlinefunc()">Book Now</button>
+
+</div>
+      </div>
+
+
+
+
+
+
+
+    <div class="main">
+      <div class="para1">
+        <h2>See the latest reviews</h2>
+        <p>Read airline reviews from our global traveller community
+</p>
+      </div>
+      <div class="para1">
+        <h2>The lowest flight prices</h2>
+        <p>Find the best flight deals from hundreds of sites with just one search</p>
+      </div>
+      <div class="para1">
+        <h2>FlyScore</h2>
+        <p>Use FlyScore to compare flights, then book the one that is right for you</p>
+      </div>
+
+    </div>
+
+
+
+
+<div class="desktop">
+
+
+
+    <div class="main2">
+      <div class="row">
+    <div class="column">
+    <a href="#"> <img src="images/ticket1.jpg" alt="Snow" style="width:100%"></a>
+      <div class="count">
+        <h5>Calgory</h5>
+      <p>Canada</p>
+      </div>
+      <div class="rate">
+        <h5>$500</h5>
+        <p>per person</p>
+      </div>
+    </div>
+    <div class="column">
+  <a href="#">    <img src="images/ticket2.jpg" alt="Forest" style="width:100%"></a>
+      <div class="count">
+        <h5>India</h5>
+      <p>Agra</p>
+      </div>
+      <div class="rate">
+        <h5>$821</h5>
+        <p>per person</p>
+      </div>
+    </div>
+    <div class="column">
+  <a href="#">    <img src="images/ticket3.jpg" alt="Mountains" style="width:100%"></a>
+  <div class="count">
+    <h5>Bangkok</h5>
+  <p>Thailand</p>
+  </div>
+  <div class="rate">
+    <h5>$855</h5>
+    <p>per person</p>
+  </div>
+</div>
+    <div class="column">
+      <img src="images/ticket4.jpg" alt="Mountains" style="width:100%">
+      <div class="count">
+        <h5>Tokyo</h5>
+      <p>Japan</p>
+      </div>
+      <div class="rate">
+        <h5>$898</h5>
+        <p>per person</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+<div class="column">
+<a href="#"> <img src="images/ticket5.jpg" alt="Snow" style="width:100%"></a>
+  <div class="count">
+    <h5>New York</h5>
+  <p>United State</p>
+  </div>
+  <div class="rate">
+    <h5>$253</h5>
+    <p>per person</p>
+  </div>
+</div>
+<div class="column">
+<a href="#">    <img src="images/ticket6.jpg" alt="Forest" style="width:100%"></a>
+  <div class="count">
+    <h5>Vancouver</h5>
+  <p>Canada</p>
+  </div>
+  <div class="rate">
+    <h5>$340</h5>
+    <p>per person</p>
+  </div>
+</div>
+<div class="column">
+<a href="#">    <img src="images/ticket7.jpg" alt="Mountains" style="width:100%"></a>
+<div class="count">
+<h5>Madrid</h5>
+<p>Spain</p>
+</div>
+<div class="rate">
+<h5>$642</h5>
+<p>per person</p>
+</div>
+</div>
+<div class="column">
+  <img src="images/ticket8.jpg" alt="Mountains" style="width:100%">
+  <div class="count">
+    <h5>Amesterdam</h5>
+  <p>Netherland</p>
+  </div>
+  <div class="rate">
+    <h5>$762</h5>
+    <p>per person</p>
+  </div>
+</div>
+</div>
+
+    </div>
+    </div>
+
+  </body>
+  <script src="javascript/script.js">
+
+  </script>
+  <footer>
+    <div id="copyright">
+          <p>
+            &copy; Copyright 2020. All Rights Reserved. <br>
+            <a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>
+
+        </div>
+  <div class="s-m">
+    <a  class = "foot" href="https://en-gb.facebook.com/login/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a class = "foot "href="https://twitter.com/login" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a class = "foot" href="https://twitter.com/login" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+    <a class = "foot" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+
+  </div>
+
+</footer>
+</html>
