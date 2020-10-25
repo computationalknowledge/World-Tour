@@ -253,7 +253,7 @@ body {
     body {
       font-family: Tahoma, Geneva, sans-serif;
       color: #ffffff;
-      background: url('back.jpg');
+      background: url('images/back.jpg');
       background-size: cover;
     }
     .mobile {
