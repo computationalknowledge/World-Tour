@@ -40,6 +40,19 @@ run().catch(console.dir);
 }
 
 
+function read(){
+
+
+    col.find().toArray(function(err, data) {
+        
+        console.log(data);
+
+      
+        
+    });   
+
+}
+
 module.exports = {
 
     createUser

@@ -1,4 +1,5 @@
 var express = require('express');
+var loginUsername = ""
 const { json } = require('body-parser');
 const mongo = require('./public/scripts/mongodb_functions');
 
@@ -31,6 +32,8 @@ app.get("/signup", function(req, res){
 
    // we have to sedn this data into database
    mongo.createUser(JSON.parse(data), "logInUsers");
+
+   // window.location.href = "http://localhost:8081/register.html"
    
 
 
