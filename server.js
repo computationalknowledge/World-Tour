@@ -24,6 +24,7 @@ app.get("/giveMeSomeData", function(req, res) {
 
 })
 
+
 app.get("/signup", function(req, res){
 
    var data = req.query.obj;
@@ -38,4 +39,15 @@ app.get("/signup", function(req, res){
 
 
 
+})
+
+app.get("/login", function(req,res){
+
+   var data = req.query.info;
+
+   console.log("login request")
+
+   console.log(JSON.parse(data))
+
+   mongo.checkUser(JSON.parse(data),"logInUsers",res)
 })

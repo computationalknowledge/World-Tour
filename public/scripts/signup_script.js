@@ -25,3 +25,33 @@ fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
 
 }
 
+
+function userlogIn(){
+   
+    var username = document.getElementById('username').value.trim()
+    var password = document.getElementById('upassword').value.trim()
+    
+    var loginObj = {
+        username : username,
+        password : password
+    }
+    
+    fetch(`/login?info=${JSON.stringify(loginObj)}`).then((response)=>{
+
+        console.log(response.text)
+               
+        response.json().then((data)=>{
+            if (data.status === 'Unsuccessful'){
+                alert('Invaid Username/Password')
+            }else{
+                alert('Logged In Successfully')
+
+                // window.location.href = "http://localhost:3000/form.html"
+                
+            }
+           })
+
+     })
+    
+    }
+
