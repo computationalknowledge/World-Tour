@@ -1,5 +1,5 @@
 var express = require('express');
-var loginUsername = ""
+var loggedinusername = "";
 const { json } = require('body-parser');
 const mongo = require('./public/scripts/mongodb_functions');
 
@@ -49,5 +49,45 @@ app.get("/login", function(req,res){
 
    console.log(JSON.parse(data))
 
-   mongo.checkUser(JSON.parse(data),"logInUsers",res)
+   mongo.checkUser(JSON.parse(data),"logInUsers",res, initialiseLoginUser)
 })
+
+app.get("/currentuser", function(req,res){
+
+   console.log("username------")
+   console.log(loggedinusername)
+
+   res.send({
+      uname: loggedinusername
+  })
+
+})
+
+
+app.get("/bookairline", function(req,res){
+   var data = req.query.obj;
+   console.log(JSON.parse(data))
+
+   mongo.makebooking(JSON.parse(data),"Bookings")
+})
+
+
+app.get("/bookcar",function(req,res){
+
+   var data = req.query.obj;
+   console.log(JSON.parse(data))
+
+   console.log(".....................")
+
+   mongo.makebooking(JSON.parse(data),"Bookings")
+})
+
+
+
+function initialiseLoginUser(uname){
+
+loggedinusername = uname;
+console.log("printing username ----")
+console.log(loggedinusername)
+
+}
