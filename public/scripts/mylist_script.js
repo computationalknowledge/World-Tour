@@ -30,7 +30,7 @@ fetch(`/showlist`).then((response) => {
         console.log(booking)
 
 
-          code +=  "<li>" +  keysarray[2]  + "<br>";
+          code +=  "<li>" +  keysarray[2] +": " +userdata[i][keysarray[2]] + "<br>";
           code +=  "Passenger: " + userdata[i].passenger + "<br>";
           code +=  "Check In: " + userdata[i].checkin + "<br>";
           code +=  "Check Out: " + userdata[i].checkout + "<br>";
