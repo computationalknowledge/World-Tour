@@ -4,6 +4,7 @@ const { json } = require('body-parser');
 const mongo = require('./public/scripts/mongodb_functions');
 
 var app = express();
+var f = require('fs')
 
 app.use(express.static('public'));
 
@@ -35,6 +36,8 @@ app.get("/signup", function(req, res){
    mongo.createUser(JSON.parse(data), "logInUsers");
 
    // window.location.href = "http://localhost:8081/register.html"
+   res.send("abcd")
+
    
 
 
@@ -83,6 +86,16 @@ app.get("/bookcar",function(req,res){
 })
 
 
+app.get(loggedinusername,function(req,res){
+   mongo.readMyList
+})
+
+app.get("/showlist",function(req,res){
+   
+   mongo.readMyList("Bookings",res, loggedinusername)
+})
+
+
 
 function initialiseLoginUser(uname){
 
@@ -91,3 +104,4 @@ console.log("printing username ----")
 console.log(loggedinusername)
 
 }
+

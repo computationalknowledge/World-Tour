@@ -12,7 +12,7 @@ function bookairlinefunc(){
 
                 // username: user.loggedInUser,
                 username: data.uname,
-                airline: document.getElementById("airlinename").value ,
+                Airline: document.getElementById("airlinename").value ,
                 passenger: document.getElementById("numpassenger").value ,
                 checkin: document.getElementById("aircheckin").value,
                 checkout: document.getElementById("aircheckout").value,
@@ -55,7 +55,7 @@ function bookcarfunc(){
 
                 // username: user.loggedInUser,
                 username: data.uname,
-                carType: document.getElementById("carname").value.trim(),
+                CarType: document.getElementById("carname").value.trim(),
                 passenger: document.getElementById("carperson").value.trim(),
                 checkin: document.getElementById("carcheckin").value,
                 checkout: document.getElementById("carcheckout").value,

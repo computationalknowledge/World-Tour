@@ -17,6 +17,7 @@ data = {
 fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
 
     console.log(response.text())
+    alert("registration process over")
 
     window.location.href = "http://localhost:8081/register.html"
 
@@ -46,7 +47,7 @@ function userlogIn(){
             }else{
                 alert('Logged In Successfully')
 
-                // window.location.href = "http://localhost:3000/form.html"
+                window.location.href = "http://localhost:8081"
                 
             }
            })
