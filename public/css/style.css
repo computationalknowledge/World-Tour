@@ -157,6 +157,7 @@ img {
   font-size: 1.25em;
   font-weight: bold;
   text-align: center;
+ 
   background-image: radial-gradient(#ffffff, #FFF0F5);
 
 }
@@ -199,7 +200,7 @@ padding-left: 30%;
   /* border-radius: 2em; */
   list-style-type: none;
   margin: 0.3em;
-  padding: 0.4em;
+  padding: 0.6em;
   background-image: radial-gradient(#ffffff, #FFF0F5);
 
 }
@@ -342,7 +343,7 @@ article p {
    header a img{
      float: left;
      height: 150px;
-     width: 150px;
+     width: 200px;
      margin-left: 2%;
    }
 
@@ -375,7 +376,7 @@ article p {
      margin-right: 1%;
      padding-left: 0;
      padding-right: 0;
-     width: 23%;
+     width: 25%;
    }
    main{
      clear: left;
@@ -556,7 +557,7 @@ article p {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
-    width: 25%;
+    width: 33.3%;
   }
 
 

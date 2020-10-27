@@ -5,6 +5,7 @@ body {
     background-size: cover; */
   }
   .mobile {
+    
     display: inline;
   }
   .desktop{
@@ -203,7 +204,8 @@ body {
    }
    .icon-bar {
      float:left;
-     width: 25%;
+     margin-left: 0.2em;
+     width: 32%;
      /* color: #3498db; */
      margin-bottom: 1%;
      background-color: #E0FFFF;
