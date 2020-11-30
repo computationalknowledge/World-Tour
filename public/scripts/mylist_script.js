@@ -34,12 +34,15 @@ fetch(`/showlist`).then((response) => {
           code +=  "Passenger: " + userdata[i].passenger + "<br>";
           code +=  "Check In: " + userdata[i].checkin + "<br>";
           code +=  "Check Out: " + userdata[i].checkout + "<br>";
-          code +=  "Price: $" + userdata[i].total + "</li>";
+          code +=  "Price: $" + userdata[i].total + "<br> <button >Delete</button> </li>";
+
+          
 
           price += userdata[i].total ;
         }
 
         code += "<li> Total Price: $"+ price  +"<li>";
+        
 
         document.getElementById('custdetails').innerHTML = "Hello, " + name +" ";
 
