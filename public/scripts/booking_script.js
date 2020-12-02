@@ -67,7 +67,14 @@ function bookcarfunc(){
         
             fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
-                console.log(response.text())
+               
+                
+
+              
+                    console.log(response.text())
+                 
+
+               
             
                 // window.location.href = "http://localhost:8081/register.html"
             

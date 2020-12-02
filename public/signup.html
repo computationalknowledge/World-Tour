@@ -46,10 +46,40 @@
         from{ top: 30px; opacity: 1;}
         to{top: 0px; opacity: 0;}
       }
+      #dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+  background: rgb(20, 9, 163);
+	border-radius:7px; 
+	width:550px;
+	z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: rgb(8, 159, 230); font-size:19px; padding:10px; color:#000; }
+#dialogbox > div > #dialogboxbody{ background:rgb(116, 220, 238); padding:20px; color:#000; }
+#dialogbox > div > #dialogboxfoot{ background:  rgb(8, 159, 230); padding:10px; text-align:right; }
+      
     </style>
   </head>
   <body>
-
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+      <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxfoot"></div>
+      </div>
+    </div>
     <div class="mobile">
       <div class="logo">
         <p>Travel The World</p>

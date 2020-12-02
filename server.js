@@ -3,6 +3,7 @@ var loggedinusername = "";
 const { json } = require('body-parser');
 const mongo = require('./public/scripts/mongodb_functions');
 
+
 var app = express();
 var f = require('fs')
 
@@ -41,7 +42,6 @@ app.get("/signup", function(req, res){
    
 
 
-
 })
 
 app.get("/login", function(req,res){
@@ -53,6 +53,8 @@ app.get("/login", function(req,res){
    console.log(JSON.parse(data))
 
    mongo.checkUser(JSON.parse(data),"logInUsers",res, initialiseLoginUser)
+
+   
 })
 
 app.get("/currentuser", function(req,res){
@@ -65,6 +67,7 @@ app.get("/currentuser", function(req,res){
   })
 
 })
+
 
 
 app.get("/bookairline", function(req,res){
