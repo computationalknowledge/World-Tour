@@ -99,6 +99,21 @@ app.get("/showlist",function(req,res){
 })
 
 
+app.get("/deletebooking", function(req,res){
+
+   var data = req.query.info;
+
+   console.log("delete request")
+
+   console.log(JSON.parse(data))
+   mongo.deleteBook(JSON.parse(data),"Bookings",res)
+
+   // mongo.checkUser(JSON.parse(data),"logInUsers",res, initialiseLoginUser)
+
+   
+})
+
+
 
 function initialiseLoginUser(uname){
 

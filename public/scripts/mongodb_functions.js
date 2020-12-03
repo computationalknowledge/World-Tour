@@ -226,6 +226,11 @@ run().catch(console.dir);
 }
 
 
+function deleteMyBooking(){
+
+}
+
+
 
 function read(){
 
@@ -240,10 +245,69 @@ function read(){
 
 }
 
+function deleteBook(userid,collname,res){
+
+    console.log("//////////////////////delete bookingf")
+
+    const { MongoClient } = require("mongodb");
+    var ObjectId = require('mongodb').ObjectID;
+
+    
+ 
+// Replace the following with your Atlas connection string                                                                                                                                        
+const url = "mongodb+srv://evneet:1997evneet14@world-tour.a1i5i.mongodb.net/worldTourUsers?retryWrites=true&w=majority";
+const client = new MongoClient(url);
+// var listdata = [];
+ 
+ // The database to use
+ const dbName = "worldTourUsers";
+                      
+ async function run() {
+    try {
+         await client.connect();
+         console.log("Connected correctly to server for delete");
+         const db = client.db(dbName);
+
+         // Use the collection "people"
+         const col = db.collection(collname);
+         console.log("................remove function")
+
+         var id = String(userid)
+         console.log("...........delte user id"+userid)
+
+         db.collection("Bookings").deleteOne({"_id": ObjectId(id)})
+         res.send({
+             status: "succesful"
+         })
+
+            // db.col.remove({_id: ObjectID(userid)})
+        
+
+         
+        
+
+        } catch (err) {
+         console.log(err.stack);
+     }
+ 
+     finally {
+        await client.close();
+        
+    }
+}
+
+run().catch(console.dir);
+
+
+
+}
+
 module.exports = {
 
     createUser,
     checkUser,
     makebooking,
-    readMyList
+    readMyList,
+    deleteBook
+    
 }

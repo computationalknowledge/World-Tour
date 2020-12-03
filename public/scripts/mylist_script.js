@@ -34,7 +34,8 @@ fetch(`/showlist`).then((response) => {
           code +=  "Passenger: " + userdata[i].passenger + "<br>";
           code +=  "Check In: " + userdata[i].checkin + "<br>";
           code +=  "Check Out: " + userdata[i].checkout + "<br>";
-          code +=  "Price: $" + userdata[i].total + "<br> <button onClick='DeleteBooking()' >Delete</button> </li>";
+          code +=  "Price: $" + userdata[i].total + "<br> ";
+          code+= "<button onClick='DeleteBooking(\""+ userdata[i]._id +"\" )'>Cancel</button> </li>";
 
           
 
@@ -50,6 +51,20 @@ fetch(`/showlist`).then((response) => {
     })
 
 })
-function DeleteBooking(){
+function DeleteBooking(loginid){
   console.log("................delete entry")
+
+  
+console.log("........."+ loginid)
+  fetch(`/deletebooking?info=${JSON.stringify(loginid)}`).then((response)=>{
+
+    // console.log(response.text)
+           
+    response.json().then((data)=>{
+
+      location.reload();
+        
+       })
+
+ })
   }
