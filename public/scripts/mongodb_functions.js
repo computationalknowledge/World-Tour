@@ -65,6 +65,10 @@ const client = new MongoClient(url);
 
          // Insert a single document, wait for promise so we can read it back
          const p = await col.insertOne(bookObj);
+         res.send(JSON.stringify({
+            status:'Successful'
+        }))
+         
          
 
         } catch (err) {

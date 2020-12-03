@@ -12,17 +12,32 @@ data = {
     password: document.getElementById("passwordsignup").value
 
 }
+if(data.firstname == "" || data.lastname == "" || data.password == "" ){
+    
+    Alert.render('fill you empty  fields')
+    // alert('fill you fields');
+
+}else{
+    fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
+
+        console.log(response.text())
+        // alert("registration process over")
+        Alert.render('You are Sucessfully register')
+    
+        // window.location.href = "http://localhost:8081/register.html"
+    
+    })
+}
 
 
+// fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
 
-fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
+//     console.log(response.text())
+//     alert("registration process over")
 
-    console.log(response.text())
-    alert("registration process over")
+//     window.location.href = "http://localhost:8081/register.html"
 
-    window.location.href = "http://localhost:8081/register.html"
-
-})
+// })
 
 
 }

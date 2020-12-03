@@ -21,14 +21,21 @@ function bookairlinefunc(){
         
             
             }
+            if (Booking_data.Airline == ""|| Booking_data.passenger == ""|| Booking_data.checkin == "" || Booking_data.checkout == "") {
+             alert('please fill your fields')
+            }else{
+                fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
-            fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+                    console.log(response.text())
+                    alert('succesfully login')
+                
+                    // window.location.href = "http://localhost:8081/register.html"
+                
+                })
+
+            }
         
-                console.log(response.text())
             
-                // window.location.href = "http://localhost:8081/register.html"
-            
-            })
 
 
          

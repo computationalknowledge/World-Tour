@@ -74,7 +74,7 @@ app.get("/bookairline", function(req,res){
    var data = req.query.obj;
    console.log(JSON.parse(data))
 
-   mongo.makebooking(JSON.parse(data),"Bookings")
+   mongo.makebooking(JSON.parse(data),"Bookings", res)
 })
 
 
@@ -85,7 +85,7 @@ app.get("/bookcar",function(req,res){
 
    console.log(".....................")
 
-   mongo.makebooking(JSON.parse(data),"Bookings")
+   mongo.makebooking(JSON.parse(data),"Bookings", res)
 })
 
 
