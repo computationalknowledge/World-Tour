@@ -21,51 +21,51 @@ function bookairlinefunc(){
         
             
             }
-            // if (Booking_data.Airline == ""|| Booking_data.passenger == ""|| Booking_data.checkin == "" || Booking_data.checkout == "") {
-            //  alert('please fill your fields')
-            // }else{
-            //     fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+            if (Booking_data.Airline == ""|| Booking_data.passenger == ""|| Booking_data.checkin == "" || Booking_data.checkout == "") {
+             alert('please fill your fields')
+            }else{
+                fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
                     
                     
-            //         response.json().then((data)=>{
+                    response.json().then((data)=>{
                    
-            //             console.log(data)
-            //             alert('booked successful')
-            //             console.log('..........................booked succesful')
+                        console.log(data)
+                        alert('booked successful')
+                        console.log('..........................booked succesful')
                        
                      
                           
-            //              })
+                         })
                   
                 
-            //         // window.location.href = "http://localhost:8081/register.html"
+                    // window.location.href = "http://localhost:8081/register.html"
                 
-            //     })
+                })
 
-            // }
+            }
 
-            fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+            // fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
-                //console.log(response.text())
+            //     //console.log(response.text())
 
-                response.json().then((data)=>{
+            //     response.json().then((data)=>{
                    
-                    console.log(data)
-                    alert('booked successful')
-                    console.log('..........................booked succesful')
+            //         console.log(data)
+            //         alert('booked successful')
+            //         console.log('..........................booked succesful')
                    
                     
                 
 
                     
                       
-                     })
+            //          })
                     
                
             
-                // window.location.href = "http://localhost:8081/register.html"
+            //     // window.location.href = "http://localhost:8081/register.html"
             
-            })
+            // })
         
             
 
@@ -73,9 +73,9 @@ function bookairlinefunc(){
          
 
 
+        })
     })
-    })
-    
+     
 
 }
 
@@ -83,9 +83,7 @@ function bookcarfunc(){
 
 
     fetch("/currentuser").then((response)=>{
-
         
-
         response.json().then((data)=>{
             console.log("......................")
             console.log(data.uname)
@@ -103,54 +101,61 @@ function bookcarfunc(){
         
             
             }
-//             if(Booking_data.CarType =="" || Booking_data.passenger == "" ||  Booking_data.checkout =="" || Booking_data.checkin == "") {
-//                 alert('please fill your fields')
-//             }else{
-// fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+            if(Booking_data.CarType =="" || Booking_data.passenger == "" ||  Booking_data.checkout =="" || Booking_data.checkin == "") {
+                alert('please fill your fields')
+            }else{
+fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
                
                 
-// console.log("/////////before booking done")
-              
-//                     console.log(response.text())
-//                     alert('booking done')
-//                     console.log('---------------bookimg done')
+    response.json().then((data)=>{
+                   
+        console.log(data)
+        alert('booked successful')
+        console.log('..........................booked succesful')
+       
+        
+    
+
+        
+          
+         })
 
                
             
-//                 // window.location.href = "http://localhost:8081/register.html"
+                // window.location.href = "http://localhost:8081/register.html"
             
-//             })
-//             }
+            })
+            }
         
             
 
-fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+// fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
-    // alert('succesfull booked')
+//     // alert('succesfull booked')
      
 
    
-    //      console.log(response.text())
-         response.json().then((data)=>{
+//     //      console.log(response.text())
+//          response.json().then((data)=>{
                    
-            console.log(data)
-            alert('booked successful')
-            console.log('..........................booked succesful')
+//             console.log(data)
+//             alert('booked successful')
+//             console.log('..........................booked succesful')
            
             
         
 
             
               
-             })
+//              })
       
 
     
  
-     // window.location.href = "http://localhost:8081/register.html"
+//      // window.location.href = "http://localhost:8081/register.html"
  
- })
+//  })
 
          
 
