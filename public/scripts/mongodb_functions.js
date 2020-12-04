@@ -39,7 +39,7 @@ run().catch(console.dir);
 
 }
 
-function makebooking(bookObj, coll_name){
+function makebooking(bookObj, coll_name, res){
 
 
     const { MongoClient } = require("mongodb");

@@ -21,19 +21,51 @@ function bookairlinefunc(){
         
             
             }
-            if (Booking_data.Airline == ""|| Booking_data.passenger == ""|| Booking_data.checkin == "" || Booking_data.checkout == "") {
-             alert('please fill your fields')
-            }else{
-                fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
-        
-                    console.log(response.text())
-                    alert('succesfully login')
+            // if (Booking_data.Airline == ""|| Booking_data.passenger == ""|| Booking_data.checkin == "" || Booking_data.checkout == "") {
+            //  alert('please fill your fields')
+            // }else{
+            //     fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+                    
+                    
+            //         response.json().then((data)=>{
+                   
+            //             console.log(data)
+            //             alert('booked successful')
+            //             console.log('..........................booked succesful')
+                       
+                     
+                          
+            //              })
+                  
                 
-                    // window.location.href = "http://localhost:8081/register.html"
+            //         // window.location.href = "http://localhost:8081/register.html"
                 
-                })
+            //     })
 
-            }
+            // }
+
+            fetch(`/bookairline?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+        
+                //console.log(response.text())
+
+                response.json().then((data)=>{
+                   
+                    console.log(data)
+                    alert('booked successful')
+                    console.log('..........................booked succesful')
+                   
+                    
+                
+
+                    
+                      
+                     })
+                    
+               
+            
+                // window.location.href = "http://localhost:8081/register.html"
+            
+            })
         
             
 
@@ -71,22 +103,54 @@ function bookcarfunc(){
         
             
             }
-        
-            fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+//             if(Booking_data.CarType =="" || Booking_data.passenger == "" ||  Booking_data.checkout =="" || Booking_data.checkin == "") {
+//                 alert('please fill your fields')
+//             }else{
+// fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         
                
                 
-
+// console.log("/////////before booking done")
               
-                    console.log(response.text())
-                 
+//                     console.log(response.text())
+//                     alert('booking done')
+//                     console.log('---------------bookimg done')
 
                
             
-                // window.location.href = "http://localhost:8081/register.html"
+//                 // window.location.href = "http://localhost:8081/register.html"
             
-            })
+//             })
+//             }
+        
+            
 
+fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
+        
+    // alert('succesfull booked')
+     
+
+   
+    //      console.log(response.text())
+         response.json().then((data)=>{
+                   
+            console.log(data)
+            alert('booked successful')
+            console.log('..........................booked succesful')
+           
+            
+        
+
+            
+              
+             })
+      
+
+    
+ 
+     // window.location.href = "http://localhost:8081/register.html"
+ 
+ })
 
          
 
