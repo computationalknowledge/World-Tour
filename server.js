@@ -20,12 +20,6 @@ var server = app.listen(8081, function () {
    console.log("Example app listening at http://%s:%s", host, port)
 })
 
-app.get("/giveMeSomeData", function(req, res) {
-
-   res.send("I dont want to send");
-
-})
-
 
 app.get("/signup", function(req, res){
 
@@ -39,6 +33,22 @@ app.get("/signup", function(req, res){
    // window.location.href = "http://localhost:8081/register.html"
    res.send("abcd")
 
+   
+
+
+})
+
+app.get('/getLoginUser', function(req, res){
+
+   res.send(JSON.stringify({loggedinusername}))
+
+})
+
+app.get('/logout',(req,res)=>{
+
+   loggedinusername = ''
+
+   res.send(JSON.stringify({status: 'logout'}))
    
 
 

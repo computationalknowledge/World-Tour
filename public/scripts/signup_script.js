@@ -71,6 +71,8 @@ function userlogIn(){
                 // alert('Logged In Successfully')
                 Alert.render('Successfully login')
 
+                // logout button add
+
                 // window.location.href = "http://localhost:8081"
                 
             }
