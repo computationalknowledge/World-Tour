@@ -29,7 +29,7 @@ fetch(`/showlist`).then((response) => {
         booking = keysarray[2];
         console.log(booking)
 
-
+code = '<style> button { background: #DEB887;  width: 190px; font-size: 16px; line-height: 25px;  padding: 10px 0;  border-radius: 15px;cursor: pointer; color: #000; } button:hover{color: #fff;background-color: black;}</style>';
           code +=  "<li>" +  keysarray[2] +": " +userdata[i][keysarray[2]] + "<br>";
           code +=  "Passenger: " + userdata[i].passenger + "<br>";
           code +=  "Check In: " + userdata[i].checkin + "<br>";
