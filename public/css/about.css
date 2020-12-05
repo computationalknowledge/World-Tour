@@ -336,8 +336,8 @@ body {
   
     #navbar{
       display: inline;
-    
-      float: left;
+    /* float: left; */
+    float: left;
     }
   
   

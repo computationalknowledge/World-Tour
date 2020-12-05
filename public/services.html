@@ -38,10 +38,11 @@
     <nav id = "navbar">
       <ul>
         <li> <a href="index.html">Home</a> </li>
-        <li> <a href="about.html">About</a> </li>
+        <li> <a href="about.html">About Us</a> </li>
         <li> <a href="services.html">Services</a> </li>
         <!-- <li> <a href="contact.html">Contact</a> </li> -->
-        <li> <a href="register.html">LogIn</a> </li>
+        <li id='login'> <a href="register.html">LogIn</a> </li>
+         <li id='logout'>LogOut</li>
         <li> <a href="mylist.html">My List</a> </li>
       </ul>
     </nav>
@@ -136,4 +137,29 @@ When you're looking to head south for a trip, renting a car in the U.S. is a gre
   </div>
 
 </footer>
+<script>
+
+  document.getElementById('logout').addEventListener('click', function(){
+    fetch('/logout').then((responce)=>{
+      window.location.href = "http://localhost:8081/register.html"
+    })
+  })
+    
+    fetch('/getLoginUser').then((response)=>{
+      response.json().then((data)=>{
+        console.log(data)  
+        if (data.loggedinusername == '' ){    
+          // hide logout
+          document.getElementById('logout').style.display='none'; 
+          document.getElementById('login').style.display='inline'; 
+          }else{
+            // show logout
+            document.getElementById('logout').style.display='inline';
+            document.getElementById('login').style.display='none'; 
+          }
+        })
+
+    })
+
+</script>
 </html>
