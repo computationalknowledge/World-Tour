@@ -118,7 +118,7 @@ fetch(`/bookcar?obj=${JSON.stringify(Booking_data)}`).then((response) => {
         console.log('..........................booked succesful')
        
         
-    
+        
 
         
           
@@ -190,8 +190,8 @@ function CustomAlert(Message) {
     this.ok = function() {
         
         
-        window.location.href = "http://localhost:8081/mylist.html"
-       
+        // window.location.href = "http://localhost:8081/mylist.html"
+        location.reload();
 
     }
 
