@@ -14,8 +14,9 @@ data = {
 }
 if(data.firstname == "" || data.lastname == "" || data.password == "" ){
     
-    Alert.render('fill you empty  fields')
+    // Alert.render('fill you empty  fields')
     // alert('fill you fields');
+    swal("Oops!", "Fill your empty fileds!", "error");
 
 }else{
     fetch(`/signup?obj=${JSON.stringify(data)}`).then((response) => {
@@ -61,8 +62,8 @@ function userlogIn(){
             if (data.status === 'Unsuccessful'){
                 // alert('Invaid Username/Password')
                
-                Alert.render('Invalid username/Password')
-               
+                // Alert.render('Invalid username/Password')
+                swal("Oops!", "Check your Username or Password!", "error");
 
                 
             }else{
